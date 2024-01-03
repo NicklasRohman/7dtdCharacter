@@ -1,0 +1,2900 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="styles\styles.css" />
+
+    <title>7dtd Calculator</title>
+  </head>
+  <body>
+    <div id="sticky">
+      <div>
+        <img
+          id="headImage"
+          alt="background image"
+          src="assets/background.webp"
+        />
+      </div>
+
+      <div class="row">
+        <div class="col" id="usedPoints">
+          <p>Used point {{usedPoints}} pt</p>
+        </div>
+        <div class="col">
+          <button id="resetBtn" type="button" onclick="resetbtn()">
+            Reset
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <!-- header area -->
+      <!-- perk container-->
+      <div class="container mt-10">
+        <!-- Perception -->
+        <div class="row" id="perceptionPerkBlock">
+          <div class="col">
+            <table
+              class="table table-hover table-bordered"
+              id="perceptionTable"
+            >
+              <tbody>
+                <tr>
+                  <td colspan="12">
+                    <img
+                      class="perkImage"
+                      alt="PerceptionAttribute"
+                      src="assets/PerceptionAttribute.webp"
+                    />
+                    Perception
+                  </td>
+                </tr>
+                <tr>
+                  <!-- Add columns for each level -->
+                  <td class="select-level" title="">1</td>
+                  <td class="select-level">2</td>
+                  <td class="select-level">3</td>
+                  <td class="select-level">4</td>
+                  <td class="select-level">5</td>
+                  <td class="select-level">6</td>
+                  <td class="select-level">7</td>
+                  <td class="select-level">8</td>
+                  <td class="select-level">9</td>
+                  <td class="select-level">10</td>
+                </tr>
+                <tr>
+                  <td colspan="12">
+                    <!-- Nested sub-tables for each perk -->
+                    <table
+                      class="table-bordered table table-hover"
+                      id="deadEyeTable"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img
+                              class="perkImage"
+                              alt="Dead Eye"
+                              src="assets/DeadEye.webp"
+                            />
+                            Dead Eye
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('deadEye',0)"
+                          >
+                            0
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('deadEye',1)"
+                            title=""
+                          >
+                            1
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('deadEye',2)"
+                            title=""
+                          >
+                            2
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('deadEye',3)"
+                            title=""
+                          >
+                            3
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('deadEye',4)"
+                            title=""
+                          >
+                            4
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('deadEye',5)"
+                            title=""
+                          >
+                            5
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table
+                      class="table-bordered table table-hover"
+                      id="demolitionsExpertTable"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img
+                              class="perkImage"
+                              alt="Demolitions Expert"
+                              src="assets/ExplosiveWeapons.webp"
+                            />
+                            Demolitions Expert
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('demolitionsExpert',0)"
+                          >
+                            0
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('demolitionsExpert',1)"
+                            title=""
+                          >
+                            1
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('demolitionsExpert',2)"
+                            title=""
+                          >
+                            2
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('demolitionsExpert',3)"
+                            title=""
+                          >
+                            3
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('demolitionsExpert',4)"
+                            title=""
+                          >
+                            4
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('demolitionsExpert',5)"
+                            title=""
+                          >
+                            5
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <table
+                      class="table-bordered table table-hover"
+                      id="spearMasterTable"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img
+                              class="perkImage"
+                              alt="SpearMaster"
+                              src="assets/SpearMaster.webp"
+                            />
+                            Spear Master
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('spearMaster',0)"
+                          >
+                            0
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('spearMaster',1)"
+                            title=""
+                          >
+                            1
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('spearMaster',2)"
+                            title=""
+                          >
+                            2
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('spearMaster',3)"
+                            title=""
+                          >
+                            3
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('spearMaster',4)"
+                            title=""
+                          >
+                            4
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('spearMaster',5)"
+                            title=""
+                          >
+                            5
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <table
+                      class="table-bordered table table-hover"
+                      id="quickAndPerceptiveTable"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img
+                              class="perkImage"
+                              alt="Quick and Perceptive"
+                              src="assets/FlurryOfBlows.webp"
+                            />
+                            Quick and Perceptive
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('quickAndPerceptive',0)"
+                          >
+                            0
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('quickAndPerceptive',1)"
+                            title=""
+                          >
+                            1
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('quickAndPerceptive',2)"
+                            title=""
+                          >
+                            2
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('quickAndPerceptive',3)"
+                            title=""
+                          >
+                            3
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <table
+                      class="table-bordered table table-hover"
+                      id="infiltratorTable"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img
+                              class="perkImage"
+                              alt="The Infiltrator"
+                              src="assets/PerceptionAttribute.webp"
+                            />
+                            The Infiltrator
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('infiltrator',0)"
+                          >
+                            0
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('infiltrator',1)"
+                            title=""
+                          >
+                            1
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('infiltrator',2)"
+                            title=""
+                          >
+                            2
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('infiltrator',3)"
+                            title=""
+                          >
+                            3
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <table
+                      class="table-bordered table table-hover"
+                      id="animalTrackerTable"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img
+                              class="perkImage"
+                              alt="AnimalTracker"
+                              src="assets/AnimalTracker.webp"
+                            />
+                            Animal Tracker
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('animalTracker',0)"
+                          >
+                            0
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('animalTracker',1)"
+                            title=""
+                          >
+                            1
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('animalTracker',2)"
+                            title=""
+                          >
+                            2
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('animalTracker',3)"
+                            title=""
+                          >
+                            3
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <table
+                      class="table-bordered table table-hover"
+                      id="penetratorTable"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img
+                              class="perkImage"
+                              alt="PaintCopyBlock"
+                              src="assets/PaintCopyBlock.webp"
+                            />
+                            The Penetrator
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('penetrator',0)"
+                          >
+                            0
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('penetrator',1)"
+                            title=""
+                          >
+                            1
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('penetrator',2)"
+                            title=""
+                          >
+                            2
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('penetrator',3)"
+                            title=""
+                          >
+                            3
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('penetrator',4)"
+                            title=""
+                          >
+                            4
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <table
+                      class="table-bordered table table-hover"
+                      id="luckyLooterTable"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img
+                              class="perkImage"
+                              alt="LuckyLooter"
+                              src="assets/LuckyLooter.webp"
+                            />
+                            Lucky Looter
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('luckyLooter',0)"
+                          >
+                            0
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('luckyLooter',1)"
+                            title=""
+                          >
+                            1
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('luckyLooter',2)"
+                            title=""
+                          >
+                            2
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('luckyLooter',3)"
+                            title=""
+                          >
+                            3
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('luckyLooter',4)"
+                            title=""
+                          >
+                            4
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('luckyLooter',5)"
+                            title=""
+                          >
+                            5
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <table
+                      class="table-bordered table table-hover"
+                      id="treasureHunterTable"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img
+                              class="perkImage"
+                              alt="Treasure_icon"
+                              src="assets/Treasure_icon.webp"
+                            />
+                            Treasure Hunter
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('treasureHunter',0)"
+                          >
+                            0
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('treasureHunter',1)"
+                            title=""
+                          >
+                            1
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('treasureHunter',2)"
+                            title=""
+                          >
+                            2
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('treasureHunter',3)"
+                            title=""
+                          >
+                            3
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <table
+                      class="table-bordered table table-hover"
+                      id="salvageOperationsTable"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img
+                              class="perkImage"
+                              alt="SalvageOperations"
+                              src="assets/SalvageOperations.webp"
+                            />
+                            Salvage Operations
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('salvageOperations',0)"
+                          >
+                            0
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('salvageOperations',1)"
+                            title=""
+                          >
+                            1
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('salvageOperations',2)"
+                            title=""
+                          >
+                            2
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('salvageOperations',3)"
+                            title=""
+                          >
+                            3
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('salvageOperations',4)"
+                            title=""
+                          >
+                            4
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetPreceptionCell('salvageOperations',5)"
+                            title=""
+                          >
+                            5
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- perk container-->
+      <div class="container mt-10">
+        <!-- Strength -->
+        <div class="row" id="strengthPerkBlock">
+          <div class="col">
+            <table class="table table-hover table-bordered" id="strengthTable">
+              <tbody>
+                <tr>
+                  <td colspan="12">
+                    <img
+                      class="perkImage"
+                      alt="SalvageOperations"
+                      src="assets/StrenghtAttribute.webp"
+                    />Strength
+                  </td>
+                </tr>
+                <tr>
+                  <!-- Add columns for each level -->
+                  <td class="select-level">1</td>
+                  <td class="select-level">2</td>
+                  <td class="select-level">3</td>
+                  <td class="select-level">4</td>
+                  <td class="select-level">5</td>
+                  <td class="select-level">6</td>
+                  <td class="select-level">7</td>
+                  <td class="select-level">8</td>
+                  <td class="select-level">9</td>
+                  <td class="select-level">10</td>
+                </tr>
+                <tr>
+                  <td colspan="12">
+                    <!-- Nested sub-tables for each perk -->
+                    <table
+                      class="table-bordered table table-hover"
+                      id="boomstickTable"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img
+                              class="perkImage"
+                              alt="SalvageOperations"
+                              src="assets/ShotgunMessiahPerk.webp"
+                            />
+                            Boomstick
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetStrengthCell('boomstick',0)"
+                          >
+                            0
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetStrengthCell('boomstick',1)"
+                            title=""
+                          >
+                            1
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetStrengthCell('boomstick',2)"
+                            title=""
+                          >
+                            2
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetStrengthCell('boomstick',3)"
+                            title=""
+                          >
+                            3
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetStrengthCell('boomstick',4)"
+                            title=""
+                          >
+                            4
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetStrengthCell('boomstick',5)"
+                            title=""
+                          >
+                            5
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table
+                      class="table-bordered table table-hover"
+                      id="pummelPeteTable"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img
+                              class="perkImage"
+                              alt="Pummel Pete"
+                              src="assets/StayDown.webp"
+                            />
+                            Pummel Pete
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetStrengthCell('pummelPete',0)"
+                          >
+                            0
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetStrengthCell('pummelPete',1)"
+                            title=""
+                          >
+                            1
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetStrengthCell('pummelPete',2)"
+                            title=""
+                          >
+                            2
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetStrengthCell('pummelPete',3)"
+                            title=""
+                          >
+                            3
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetStrengthCell('pummelPete',4)"
+                            title=""
+                          >
+                            4
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetStrengthCell('pummelPete',5)"
+                            title=""
+                          >
+                            5
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <table
+                      class="table-bordered table table-hover"
+                      id="skullCrusherTable"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img
+                              class="perkImage"
+                              alt="Skull Crusher"
+                              src="assets/HeavyMetal.webp"
+                            />
+                            Skull Crusher
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetStrengthCell('skullCrusher',0)"
+                          >
+                            0
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetStrengthCell('skullCrusher',1)"
+                            title=""
+                          >
+                            1
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetStrengthCell('skullCrusher',2)"
+                            title=""
+                          >
+                            2
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetStrengthCell('skullCrusher',3)"
+                            title=""
+                          >
+                            3
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetStrengthCell('skullCrusher',4)"
+                            title=""
+                          >
+                            4
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetStrengthCell('skullCrusher',5)"
+                            title=""
+                          >
+                            5
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <table
+                      class="table-bordered table table-hover"
+                      id="bigAndFastTable"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img
+                              class="perkImage"
+                              alt="Big and Fast"
+                              src="assets/FlurryOfBlows.webp"
+                            />
+                            Big and Fast
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetStrengthCell('bigAndFast',0)"
+                          >
+                            0
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetStrengthCell('bigAndFast',1)"
+                            title=""
+                          >
+                            1
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetStrengthCell('bigAndFast',2)"
+                            title=""
+                          >
+                            2
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetStrengthCell('bigAndFast',3)"
+                            title=""
+                          >
+                            3
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <table
+                      class="table-bordered table table-hover"
+                      id="heavyArmorTable"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img
+                              class="perkImage"
+                              alt="Big and Fast"
+                              src="assets/HeavyArmor.webp"
+                            />
+                            Heavy Armor
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetStrengthCell('heavyArmor',0)"
+                          >
+                            0
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetStrengthCell('heavyArmor',1)"
+                            title=""
+                          >
+                            1
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetStrengthCell('heavyArmor',2)"
+                            title=""
+                          >
+                            2
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetStrengthCell('heavyArmor',3)"
+                            title=""
+                          >
+                            3
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetStrengthCell('heavyArmor',4)"
+                            title=""
+                          >
+                            4
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <table
+                      class="table-bordered table table-hover"
+                      id="packMuleTable"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img
+                              class="perkImage"
+                              alt="Pack Mule"
+                              src="assets/PackMule.webp"
+                            />
+                            Pack Mule
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetStrengthCell('packMule',0)"
+                          >
+                            0
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetStrengthCell('packMule',1)"
+                            title=""
+                          >
+                            1
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetStrengthCell('packMule',2)"
+                            title=""
+                          >
+                            2
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetStrengthCell('packMule',3)"
+                            title=""
+                          >
+                            3
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetStrengthCell('packMule',4)"
+                            title=""
+                          >
+                            4
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetStrengthCell('packMule',5)"
+                            title=""
+                          >
+                            5
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <table
+                      class="table-bordered table table-hover"
+                      id="masterChefTable"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img
+                              class="perkImage"
+                              alt="Master Chef"
+                              src="assets/MasterChef.webp"
+                            />
+                            Master Chef
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetStrengthCell('masterChef',0)"
+                          >
+                            0
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetStrengthCell('masterChef',1)"
+                            title=""
+                          >
+                            1
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetStrengthCell('masterChef',2)"
+                            title=""
+                          >
+                            2
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetStrengthCell('masterChef',3)"
+                            title=""
+                          >
+                            3
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <table
+                      class="table-bordered table table-hover"
+                      id="miner69erTable"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img
+                              class="perkImage"
+                              alt="Miner 69er"
+                              src="assets/Miner69er.webp"
+                            />
+                            Miner 69er
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetStrengthCell('miner69er',0)"
+                          >
+                            0
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetStrengthCell('miner69er',1)"
+                            title=""
+                          >
+                            1
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetStrengthCell('miner69er',2)"
+                            title=""
+                          >
+                            2
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetStrengthCell('miner69er',3)"
+                            title=""
+                          >
+                            3
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetStrengthCell('miner69er',4)"
+                            title=""
+                          >
+                            4
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetStrengthCell('miner69er',5)"
+                            title=""
+                          >
+                            5
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <table
+                      class="table-bordered table table-hover"
+                      id="motherLodeTable"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img
+                              class="perkImage"
+                              alt="Mother Lode"
+                              src="assets/MotherLode.webp"
+                            />
+                            Mother Lode
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetStrengthCell('motherLode',0)"
+                          >
+                            0
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetStrengthCell('motherLode',1)"
+                            title=""
+                          >
+                            1
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetStrengthCell('motherLode',2)"
+                            title=""
+                          >
+                            2
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetStrengthCell('motherLode',3)"
+                            title=""
+                          >
+                            3
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetStrengthCell('motherLode',4)"
+                            title=""
+                          >
+                            4
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetStrengthCell('motherLode',5)"
+                            title=""
+                          >
+                            5
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- perk container-->
+      <div class="container mt-10">
+        <!-- Fortitude -->
+        <div class="row" id="fortitudePerkBlock">
+          <div class="col">
+            <table class="table table-hover table-bordered" id="fortitudeTable">
+              <tbody>
+                <tr>
+                  <td colspan="12">
+                    <img
+                      class="perkImage"
+                      alt="Fortitude"
+                      src="assets/FortitudeAttribute.webp"
+                    />
+                    Fortitude
+                  </td>
+                </tr>
+                <tr>
+                  <!-- Add columns for each level -->
+                  <td class="select-level">1</td>
+                  <td class="select-level">2</td>
+                  <td class="select-level">3</td>
+                  <td class="select-level">4</td>
+                  <td class="select-level">5</td>
+                  <td class="select-level">6</td>
+                  <td class="select-level">7</td>
+                  <td class="select-level">8</td>
+                  <td class="select-level">9</td>
+                  <td class="select-level">10</td>
+                </tr>
+                <tr>
+                  <td colspan="12">
+                    <!-- Nested sub-tables for each perk -->
+                    <table
+                      class="table-bordered table table-hover"
+                      id="theBrawlerTable"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img
+                              class="perkImage"
+                              alt="the Brawler"
+                              src="assets/TheBrawler.webp"
+                            />
+                            The Brawler
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('theBrawler',0)"
+                          >
+                            0
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('theBrawler',1)"
+                            title=""
+                          >
+                            1
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('theBrawler',2)"
+                            title=""
+                          >
+                            2
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('theBrawler',3)"
+                            title=""
+                          >
+                            3
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('theBrawler',4)"
+                            title=""
+                          >
+                            4
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('theBrawler',5)"
+                            title=""
+                          >
+                            5
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table
+                      class="table-bordered table table-hover"
+                      id="machineGunnerTable"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img
+                              class="perkImage"
+                              alt="Machine Gunner"
+                              src="assets/AutomaticWeapons.webp"
+                            />
+                            Machine Gunner
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('machineGunner',0)"
+                          >
+                            0
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('machineGunner',1)"
+                            title=""
+                          >
+                            1
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('machineGunner',2)"
+                            title=""
+                          >
+                            2
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('machineGunner',3)"
+                            title=""
+                          >
+                            3
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('machineGunner',4)"
+                            title=""
+                          >
+                            4
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('machineGunner',5)"
+                            title=""
+                          >
+                            5
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <table
+                      class="table-bordered table table-hover"
+                      id="lightningHandsTable"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img
+                              class="perkImage"
+                              alt="Lightning Hands"
+                              src="assets/FlurryOfBlows.webp"
+                            />
+                            Lightning Hands
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('lightningHands',0)"
+                          >
+                            0
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('lightningHands',1)"
+                            title=""
+                          >
+                            1
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('lightningHands',2)"
+                            title=""
+                          >
+                            2
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('lightningHands',3)"
+                            title=""
+                          >
+                            3
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <table
+                      class="table-bordered table table-hover"
+                      id="theHuntsmanTable"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img
+                              class="perkImage"
+                              alt="The Huntsman"
+                              src="assets/Archery.webp"
+                            />
+                            The Huntsman
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('theHuntsman',0)"
+                          >
+                            0
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('theHuntsman',1)"
+                            title=""
+                          >
+                            1
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('theHuntsman',2)"
+                            title=""
+                          >
+                            2
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('theHuntsman',3)"
+                            title=""
+                          >
+                            3
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('theHuntsman',4)"
+                            title=""
+                          >
+                            4
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('theHuntsman',5)"
+                            title=""
+                          >
+                            5
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <table
+                      class="table-bordered table table-hover"
+                      id="wellInsulatedTable"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img
+                              class="perkImage"
+                              alt="Well Insulated"
+                              src="assets/WellInsulated.webp"
+                            />
+                            Well Insulated
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('wellInsulated',0)"
+                          >
+                            0
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('wellInsulated',1)"
+                            title=""
+                          >
+                            1
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('wellInsulated',2)"
+                            title=""
+                          >
+                            2
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('wellInsulated',3)"
+                            title=""
+                          >
+                            3
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <table
+                      class="table-bordered table table-hover"
+                      id="livingOffTheLandTable"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img
+                              class="perkImage"
+                              alt="Living Off The Land"
+                              src="assets/LivingOffTheLand.webp"
+                            />
+                            Living Off The Land
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('livingOffTheLand',0)"
+                          >
+                            0
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('livingOffTheLand',1)"
+                            title=""
+                          >
+                            1
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('livingOffTheLand',2)"
+                            title=""
+                          >
+                            2
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('livingOffTheLand',3)"
+                            title=""
+                          >
+                            3
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <table
+                      class="table-bordered table table-hover"
+                      id="painToleranceTable"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img
+                              class="perkImage"
+                              alt="Pain Tolerance"
+                              src="assets/PainTolerance.webp"
+                            />
+                            Pain Tolerance
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('painTolerance',0)"
+                          >
+                            0
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('painTolerance',1)"
+                            title=""
+                          >
+                            1
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('painTolerance',2)"
+                            title=""
+                          >
+                            2
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('painTolerance',3)"
+                            title=""
+                          >
+                            3
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('painTolerance',4)"
+                            title=""
+                          >
+                            4
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('painTolerance',5)"
+                            title=""
+                          >
+                            5
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <table
+                      class="table-bordered table table-hover"
+                      id="healingFactorTable"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img
+                              class="perkImage"
+                              alt="Healing Factor"
+                              src="assets/HealingFactor.webp"
+                            />
+                            Healing Factor
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('healingFactor',0)"
+                          >
+                            0
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('healingFactor',1)"
+                            title=""
+                          >
+                            1
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('healingFactor',2)"
+                            title=""
+                          >
+                            2
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('healingFactor',3)"
+                            title=""
+                          >
+                            3
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('healingFactor',4)"
+                            title=""
+                          >
+                            4
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('healingFactor',5)"
+                            title=""
+                          >
+                            5
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <table
+                      class="table-bordered table table-hover"
+                      id="ironGutTable"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img
+                              class="perkImage"
+                              alt="Iron Gut"
+                              src="assets/SlowMetabolism.webp"
+                            />
+                            Iron Gut
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('ironGut',0)"
+                          >
+                            0
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('ironGut',1)"
+                            title=""
+                          >
+                            1
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('ironGut',2)"
+                            title=""
+                          >
+                            2
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('ironGut',3)"
+                            title=""
+                          >
+                            3
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('ironGut',4)"
+                            title=""
+                          >
+                            4
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('ironGut',5)"
+                            title=""
+                          >
+                            5
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <table
+                      class="table-bordered table table-hover"
+                      id="rule1CardioTable"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img
+                              class="perkImage"
+                              alt="Rule 1 Cardio"
+                              src="assets/Cardio.webp"
+                            />
+                            Rule 1 Cardio
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('rule1Cardio',0)"
+                          >
+                            0
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('rule1Cardio',1)"
+                            title=""
+                          >
+                            1
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('rule1Cardio',2)"
+                            title=""
+                          >
+                            2
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetFortitudeCell('rule1Cardio',3)"
+                            title=""
+                          >
+                            3
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- perk container-->
+      <div class="container mt-10">
+        <!-- Agility -->
+        <div class="row" id="agilityPerkBlock">
+          <div class="col">
+            <table class="table table-hover table-bordered" id="agilityTable">
+              <tbody>
+                <tr>
+                  <td colspan="12">
+                    <img
+                      class="perkImage"
+                      alt="Agility"
+                      src="assets/AgilityAttribute.webp"
+                    />
+                    Agility
+                  </td>
+                </tr>
+                <tr>
+                  <!-- Add columns for each level -->
+                  <td class="select-level">1</td>
+                  <td class="select-level">2</td>
+                  <td class="select-level">3</td>
+                  <td class="select-level">4</td>
+                  <td class="select-level">5</td>
+                  <td class="select-level">6</td>
+                  <td class="select-level">7</td>
+                  <td class="select-level">8</td>
+                  <td class="select-level">9</td>
+                  <td class="select-level">10</td>
+                </tr>
+                <tr>
+                  <td colspan="12">
+                    <!-- Nested sub-tables for each perk -->
+                    <table
+                      class="table-bordered table table-hover"
+                      id="archeryTable"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img
+                              class="perkImage"
+                              alt="Archery"
+                              src="assets/Archery.webp"
+                              title="Master the use of bows and crossbows."
+                            />
+                            Archery
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetAgilityCell('archery',0)"
+                          >
+                            0
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetAgilityCell('archery',1)"
+                            title="Many start on the path of the ranger but few can reach it. Bows deal 10% more damage, 10% faster aim, draw and reload with bows. Find more bows and parts in loot.	"
+                          >
+                            1
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetAgilityCell('archery',2)"
+                            title="You still have much to learn, grasshopper. Bows deal 20% more damage, 20% faster aim, draw and reload with bows. Find more bows and parts in loot.	"
+                          >
+                            2
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetAgilityCell('archery',3)"
+                            title="All the rigorous training has turned you into a marksman with Bows. Bows deal 30% more damage, 30% faster aim, draw and reload with bows. Find more bows and parts in loot.	"
+                          >
+                            3
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetAgilityCell('archery',4)"
+                            title="You can split a hair you are so good at archery now. Bows deal 40% more damage, 40% faster aim, draw and reload with bows. Find more bows and parts in loot.	"
+                          >
+                            4
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetAgilityCell('archery',5)"
+                            title="You have mastered archery and are now a ranger. Bows deal 50% more damage, 50% faster aim, draw and reload with bows. Find more bows and parts in loot.	"
+                          >
+                            5
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table
+                      class="table-bordered table table-hover"
+                      id="gunslingerTable"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img
+                              class="perkImage"
+                              alt="Gun Slinger"
+                              src="assets/Gunslinger.webp"
+                              title="Settle your disputes the old way and be a gunslinger in the apocalypse. Master the use of handguns and SMG. Unlocks pistol crafting."
+                            />
+                            Gun slinger
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetAgilityCell('gunslinger',0)"
+                          >
+                            0
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetAgilityCell('gunslinger',1)"
+                            title="You're no Wyatt Earp but you're better than the average drifter. Handguns deal 10% more damage, 5% faster fire rate, and 10% faster reload with handguns. Find more handguns, parts and 9mm ammo in loot.	"
+                          >
+                            1
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetAgilityCell('gunslinger',2)"
+                            title="You are making a name for yourself, outlaw. Handguns deal 20% more damage, 10% faster fire rate, and reload 15% faster with handguns. Find more handguns, parts and 9mm ammo in loot.	"
+                          >
+                            2
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetAgilityCell('gunslinger',3)"
+                            title="You can keep most situations under control, sheriff. Handguns deal 30% more damage, 15% faster fire rate, and reload 20% faster. Critical Damage: 5 successive hits in a short time cause critical damage. Find more handguns, parts and 9mm ammo in loot."
+                          >
+                            3
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetAgilityCell('gunslinger',4)"
+                            title="You're now a gunfighter and can clear out a saloon full of rowdy bastards at the drop of a hat. Handguns deal 40% more damage, 20% faster fire rate, and reload 25% faster. Critical Damage: 4 successive hits in a short time cause the last shot to do 100% extra damage. Find more handguns, parts and 9mm ammo in loot."
+                          >
+                            4
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetAgilityCell('gunslinger',5)"
+                            title="You are the fastest gunslinger in Navezgane. Deal 50% more damage, 25% faster fire rate, and 30% faster reload with handguns. Critical Damage: 3 successive hits in a short time cause the last shot to do 100% extra damage. Find more handguns, parts and 9mm ammo in loot."
+                          >
+                            5
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <table
+                      class="table-bordered table table-hover"
+                      id="deepCutsTable"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img
+                              class="perkImage"
+                              alt="Deep Cuts"
+                              src="assets/DeepCuts.webp"
+                              title="Specialize in using bladed weapons like knives or machetes (not axes) to bleed your foes dry."
+                            />
+                            Deep Cuts
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetAgilityCell('deepCuts',0)"
+                          >
+                            0
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetAgilityCell('deepCuts',1)"
+                            title="You might have a dull blade but you know how to use it. Bladed weapons deal 10% more damage. You can inflict up to 3 Bleeding Wounds on an enemy and a power attack inflicts 2. Every attack refreshes the duration on bleeding. Enemies run 10% slower while bleeding. Stamina costs are reduced by 8% and 15% for power attacks. Find more bladed weapons and parts in loot."
+                          >
+                            1
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetAgilityCell('deepCuts',2)"
+                            title="Your friends say you're a really knife guy. Craft quality 3 fair knives and deal 20% more damage. You can inflict up to 4 Bleeding Wounds on an enemy and a power attack inflicts 3. Stamina costs are reduced by 15% and 30% for power attacks. Find more bladed weapons and parts in loot."
+                          >
+                            2
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetAgilityCell('deepCuts',3)"
+                            title="You are a cut above the rest. Craft quality 4 good knives and deal 30% more damage. You can inflict up to 5 Bleeding Wounds on an enemy and a power attack inflicts 4. Glancing blows have a 40% chance to cause 1 Bleeding Wound. Enemies run 15% slower while bleeding. Stamina costs are reduced by 20% and 40% for power attacks. Killing blows grant 10 stamina. Find more bladed weapons and parts in loot."
+                          >
+                            3
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetAgilityCell('deepCuts',4)"
+                            title="You are quite lethal with bladed weapons. Craft quality 5 great knives and deal 40% more damage. You can inflict up to 6 Bleeding Wounds on an enemy and a power attack inflicts 4. Glancing blows have a 70% chance to cause 1 Bleeding Wound. Stamina costs are reduced by 25% and 50% for power attacks. Killing blows grant 20 stamina. Find more bladed weapons and parts in loot."
+                          >
+                            4
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetAgilityCell('deepCuts',5)"
+                            title="You are a samurai and can make sushi out of your foes. Deal 50% more damage. You can inflict up to 7 Bleeding Wounds on an enemy and a power attack inflicts 5. All glancing blows cause 1 Bleeding Wound. Enemies run 20% slower while bleeding. Killing blows grant 30 stamina. Find more bladed weapons and parts in loot."
+                          >
+                            5
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <table
+                      class="table-bordered table table-hover"
+                      id="whirlwindTable"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img
+                              class="perkImage"
+                              alt="Whirlwind"
+                              src="assets/FlurryOfBlows.webp"
+                              title="Learn to swing your blades fast and become a whirlwind of destruction and carnage."
+                            />
+                            Whirlwind
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetAgilityCell('whirlwind',0)"
+                          >
+                            0
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetAgilityCell('whirlwind',1)"
+                            title="They won't see it coming. Knife attacks are 10% faster."
+                          >
+                            1
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetAgilityCell('whirlwind',2)"
+                            title="Slice your enemies to ribbons with blazing knife speeds. Knife attacks is 17% faster."
+                          >
+                            2
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetAgilityCell('whirlwind',3)"
+                            title="Rip and tear with no despair! Knife attacks is 25% faster."
+                          >
+                            3
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <table
+                      class="table-bordered table table-hover"
+                      id="runAndGunTable"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img
+                              class="perkImage"
+                              alt="Run And Gun"
+                              src="assets/RunAndGun.webp"
+                              title="Improve your hip fire accuracy and run faster while reloading any ranged weapon."
+                            />
+                            Run and Gun
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetAgilityCell('runAndGun',0)"
+                          >
+                            0
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetAgilityCell('runAndGun',1)"
+                            title="Spray and Pray. Aiming is overrated, just shoot first and ask questions later. Hip fire accuracy is improved by 10% and movement penalty when reloading is reduced 30%."
+                          >
+                            1
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetAgilityCell('runAndGun',2)"
+                            title="Your twitch fingers might get you into trouble but have saved your skin on many occasions. Hip fire accuracy is improved by 17% and movement penalty when reloading is reduced 60%."
+                          >
+                            2
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetAgilityCell('runAndGun',3)"
+                            title="You are now a deadly trigger man and have mastered the art of run and gun. Hip fire accuracy is improved by 25% and have no movement penalty when reloading."
+                          >
+                            3
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <table
+                      class="table-bordered table table-hover"
+                      id="lightArmorTable"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img
+                              class="perkImage"
+                              alt="Light Armor"
+                              src="assets/LightArmor.webp"
+                              title="Specialize in light armor to increase armor rating and armor durability."
+                            />
+                            Light Armor
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetAgilityCell('lightArmor',0)"
+                          >
+                            0
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetAgilityCell('lightArmor',1)"
+                            title="You have started on the path of the lightly armored warrior. Reduce light armor movement penalty by 15% and stamina penalty by 10%. Improve durability by 50%. Find more armor and parts in loot."
+                          >
+                            1
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetAgilityCell('lightArmor',2)"
+                            title="You've survived some battles and hope to be a knight one day. Reduce light armor movement penalty by 30% and stamina penalty by 20%. Improve durability by 100%. Find more armor and parts in loot."
+                          >
+                            2
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetAgilityCell('lightArmor',3)"
+                            title="All the hard training and battles have paid off, you are now a knight. Reduce light armor movement penalty by 50% and stamina penalty by 35%. Improve durability by 150%. Find more armor and parts in loot."
+                          >
+                            3
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetAgilityCell('lightArmor',4)"
+                            title="You have made a name for yourself and are feared by nearly all as you are now a gladiator. Reduce light armor movement penalty by 75% and stamina penalty by 50%. Improve durability by 200%. Find more armor and parts in loot."
+                          >
+                            4
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <table
+                      class="table-bordered table table-hover"
+                      id="parkourTable"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img
+                              class="perkImage"
+                              alt="Parkour"
+                              src="assets/Parkour.webp"
+                              title="Specialize in acrobatically getting anywhere you want to go, no matter how far up or far down that may be."
+                            />
+                            Parkour
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetAgilityCell('parkour',0)"
+                          >
+                            0
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetAgilityCell('parkour',1)"
+                            title="You can do a few moves but mostly you are just used to falling on your face. Increase safe fall distance by one meter and reduce stamina cost of jumping by 10%."
+                          >
+                            1
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetAgilityCell('parkour',2)"
+                            title="You've pulled off some stunts, but sometimes your hospital bills are larger than your paycheck. Reduce stamina cost of jumping by 20%. Increase safe fall distance by 2 meters and jump 1 meter higher."
+                          >
+                            2
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetAgilityCell('parkour',3)"
+                            title="You're an adrenaline junkie and capable of death defying acts of insanity. Reduce stamina cost of jumping by 30%. Increase safe fall distance by 4 meters and never get a broken leg when falling."
+                          >
+                            3
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetAgilityCell('parkour',4)"
+                            title="You are now a parkour master and can navigate difficult situations easily. Reduce stamina cost of jumping by 40%. Increase safe fall distance by 5, can jump 2 meters higher, and never get a sprained or broken leg when falling."
+                          >
+                            4
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <table
+                      class="table-bordered table table-hover"
+                      id="hiddenStrikeTable"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img
+                              class="perkImage"
+                              alt="Hidden Strike"
+                              src="assets/HiddenStrike.webp"
+                            />
+                            Hidden Strike
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetAgilityCell('hiddenStrike',0)"
+                          >
+                            0
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetAgilityCell('hiddenStrike',1)"
+                            title="	You are a cutthroat who prefers to operate from the shadows and use stealth and sneak attacks. Sneak attacks deal an extra 50% damage."
+                          >
+                            1
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetAgilityCell('hiddenStrike',2)"
+                            title="You are now a butcher and have racked up some kills and are mastering the art assassination. Sneak attacks deal an extra 100% damage."
+                          >
+                            2
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetAgilityCell('hiddenStrike',3)"
+                            title="You are now an executioner and are beginning to master your craft. Sneak attacks deal an extra 150% damage."
+                          >
+                            3
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetAgilityCell('hiddenStrike',4)"
+                            title="You are a cold blooded killer and feel no remorse doing your dark deeds. Sneak attacks deal an extra 200% damage."
+                          >
+                            4
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetAgilityCell('hiddenStrike',5)"
+                            title="You are now the ultimate assassin and can deal maximum sneak damage to your victims. Sneak attacks deal an extra 250% damage."
+                          >
+                            5
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <table
+                      class="table-bordered table table-hover"
+                      id="fromTheShadowsTable"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img
+                              class="perkImage"
+                              alt="fromTheShadows"
+                              src="assets/FromTheShadows.webp"
+                            />
+                            From The Shadows
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetAgilityCell('fromTheShadows',0)"
+                          >
+                            0
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetAgilityCell('fromTheShadows',1)"
+                            title="Hide in the shadows 13% more effectively, noises from actions are muffled 10%, and sneak movement is 10% faster. Enemies will search for you for up to 50 seconds."
+                          >
+                            1
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetAgilityCell('fromTheShadows',2)"
+                            title="Hide in the shadows 26% more effectively, noises from actions are muffled 20% and sneak movement is 20% faster. Enemies will search for you for up to 40 seconds."
+                          >
+                            2
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetAgilityCell('fromTheShadows',3)"
+                            title="Hide in the shadows 39% more effectively, noises from actions are muffled 30%, and sneak movement is 30% faster. Enemies will search for you for up to 30 seconds."
+                          >
+                            3
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetAgilityCell('fromTheShadows',4)"
+                            title="Hide in the shadows 52% more effectively, noises from actions are muffled 40%, and sneak movement is 40% faster. Enemies will search for you for up to 25 seconds."
+                          >
+                            4
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetAgilityCell('fromTheShadows',5)"
+                            title="Hide in the shadows 65% more effectively, noises from actions are muffled 50% and sneak movement is 50% faster. Enemies will search for you for up to 20 seconds."
+                          >
+                            5
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- perk container-->
+      <div class="container mt-10">
+        <!-- Intellect -->
+        <div class="row" id="intellectPerkBlock">
+          <div class="col">
+            <table class="table table-hover table-bordered" id="intellectTable">
+              <tbody>
+                <tr>
+                  <td colspan="12">
+                    <img
+                      class="perkImage"
+                      alt="Intellect"
+                      src="assets/IntellectAttribute.webp"
+                    />
+                    Intellect
+                  </td>
+                </tr>
+                <tr>
+                  <!-- Add columns for each level -->
+                  <td
+                    class="select-level"
+                    title="You are as dumb as box of rocks but you still do 200% head shot damage and have a 5% chance to dismember with stun batons and Robotic turrets."
+                  >
+                    1
+                  </td>
+                  <td
+                    class="select-level"
+                    title="You aren't the brightest color in the box, but you occasionally hit the nail on the head. Deal 210% head shot damage and have a 10% chance to dismember with stun batons and Robotic turrets."
+                  >
+                    2
+                  </td>
+                  <td
+                    class="select-level"
+                    title="Even dimwits have a bright idea once in a while. Deal 220% head shot damage and have a 15% chance to dismember with stun batons and Robotic turrets."
+                  >
+                    3
+                  </td>
+                  <td
+                    class="select-level"
+                    title="You don't like to learn new stuff but you will if you have to. Deal 230% head shot damage and have a 20% chance to dismember with stun batons and Robotic turrets."
+                  >
+                    4
+                  </td>
+                  <td
+                    class="select-level"
+                    title="Being average is better than being below average. Deal 240% head shot damage and have a 25% chance to dismember with stun batons and Robotic turrets."
+                  >
+                    5
+                  </td>
+                  <td
+                    class="select-level"
+                    title="You are now getting pretty smart. Deal 250% head shot damage and have a 30% chance to dismember with stun batons and Robotic turrets."
+                  >
+                    6
+                  </td>
+                  <td
+                    class="select-level"
+                    title="Your peers consider you brilliant. Deal 260% head shot damage and have a 35% chance to dismember with stun batons and Robotic turrets."
+                  >
+                    7
+                  </td>
+                  <td
+                    class="select-level"
+                    title="Your intellect is quite impressive. Deal 270% head shot damage and have a 40% chance to dismember with stun batons and Robotic turrets."
+                  >
+                    8
+                  </td>
+                  <td
+                    class="select-level"
+                    title="You are now a true genius. Deal 285% head shot damage and have a 45% chance to dismember with stun batons and Robotic turrets."
+                  >
+                    9
+                  </td>
+                  <td
+                    class="select-level"
+                    title="You are a mastermind of intellect. Deal 300% head shot damage and have a 50% chance to dismember with stun batons and Robotic turrets."
+                  >
+                    10
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="12">
+                    <!-- Nested sub-tables for each perk -->
+                    <table
+                      class="table-bordered table table-hover"
+                      id="electrocutionerTable"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img
+                              class="perkImage"
+                              alt="Electrocutioner"
+                              src="assets/Electrocutioner.webp"
+                            />
+                            Electrocutioner
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('electrocutioner',0)"
+                          >
+                            0
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('electrocutioner',1)"
+                            title="Where are the instructions? You're smart, but remember to point it away from you and pull the trigger. All batons deal 10% more damage. Stun batons electrify victims 20% longer. Stamina costs are reduced by 8% and 15% for power attacks. Find more batons and parts in loot."
+                          >
+                            1
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('electrocutioner',2)"
+                            title="You're getting the hang of using batons to incapacitate your enemies. All batons deal 20% more damage, and stun victims 40% longer. Stamina costs are reduced by 15% and 30% for power attacks. Find more batons and parts in loot."
+                          >
+                            2
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('electrocutioner',3)"
+                            title="You are getting dangerous with batons. You could probably knock out cattle if the zombies hadn't ate them all. All batons deal 30% more damage, and stun victims 60% longer. Stamina costs are reduced by 20% and 40% for power attacks. Killing blows grant 10 stamina. Find more batons and parts in loot."
+                          >
+                            3
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('electrocutioner',4)"
+                            title="You are lethal with batons. All batons deal 40% more damage, and stun victims 80% longer. Stamina costs are reduced by 25% and 50% for power attacks. Killing blows grant 20 stamina. Find more batons and parts in loot."
+                          >
+                            4
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('electrocutioner',5)"
+                            title="You are the last thing they see coming and an executioner with batons. Deal 50% more damage and stun victims 100% longer. Killing blows grant 30 stamina."
+                          >
+                            5
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table
+                      class="table-bordered table table-hover"
+                      id="roboticsInventorTable"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img
+                              class="perkImage"
+                              alt="Robotics"
+                              src="assets/TurretsSyndrome.webp"
+                            />
+                            Robotics Inventor
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('roboticsInventor',0)"
+                          >
+                            0
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('roboticsInventor',1)"
+                            title="You have some crazy innovative ideas but your implementation could use some work. Robotic weapons deal 10% more damage, 30% faster fire rate and reload an extra 10 rounds. Robot active range is increased from 10 to 14 meters. You can deploy multiple robots but only the closest will be active."
+                          >
+                            1
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('roboticsInventor',2)"
+                            title="You are taking your projects to the next level now. Robotic weapons deal 20% more damage, 60% faster fire rate and reload an extra 20 rounds. Robot active range is 15 meters."
+                          >
+                            2
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('roboticsInventor',3)"
+                            title="You have mastered the basics of automated weaponry. Robotic weapons deal 30% more damage, 90% faster fire rate and reload an extra 30 rounds. Robot active range is 16 meters."
+                          >
+                            3
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('roboticsInventor',4)"
+                            title="You must be from the year 2077. You are creating some futuristic technology. Robotic weapons deal 40% more damage, 120% faster fire rate and reload an extra 40 rounds. Reload robot weapons 10% faster. Robot active range is 17 meters."
+                          >
+                            4
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('roboticsInventor',5)"
+                            title="You are now a top expert in robotics. Reload robot weapons 20% faster and reload an extra 50 rounds. Robot active range is 18 meters. Two deployed robots can be active at once."
+                          >
+                            5
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <table
+                      class="table-bordered table table-hover"
+                      id="calculatedAttackTable"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img
+                              class="perkImage"
+                              alt="Calculated Attack"
+                              src="assets/FlurryOfBlows.webp"
+                            />
+                            Calculated Attack
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('calculatedAttack',0)"
+                          >
+                            0
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('calculatedAttack',1)"
+                            title="It's as simple as basic math. Attack with batons are 10% faster."
+                          >
+                            1
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('calculatedAttack',2)"
+                            title="You see even quicker routes to success. Attack with batons are 17% faster."
+                          >
+                            2
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('calculatedAttack',3)"
+                            title="You see the outcome before it happens and use enemy movements against them. Attack with batons are 25% faster."
+                          >
+                            3
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <table
+                      class="table-bordered table table-hover"
+                      id="betterBarterTable"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img
+                              class="perkImage"
+                              alt="Better Barter"
+                              src="assets/BetterBarter.webp"
+                            />
+                            Better Barter
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('betterBarter',0)"
+                          >
+                            0
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('betterBarter',1)"
+                            title="You are good at wheeling and dealing and never pay full price for anything. Get a 5% better deal buying and selling merchandise with traders."
+                          >
+                            1
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('betterBarter',2)"
+                            title="You must have been a salesman before the apocalypse with the kind of good deals you find. Get a 10% better deal buying and selling with traders."
+                          >
+                            2
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('betterBarter',3)"
+                            title="You act like a sales manager and have authority to cut the best deals. Get a 15% better deal buying and selling with traders."
+                          >
+                            3
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('betterBarter',4)"
+                            title="You would do well if the stock market still existed. Get a 20% better deal buying and selling with traders."
+                          >
+                            4
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('betterBarter',5)"
+                            title="You are like a Corporate Manager and buy goods at the lowest prices and sell for a huge profit. Get a 25% better deal buying and selling with traders."
+                          >
+                            5
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <table
+                      class="table-bordered table table-hover"
+                      id="theDaringAdventurerTable"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img
+                              class="perkImage"
+                              alt="The Daring Adventurer"
+                              src="assets/TheDaringAdventurer.webp"
+                            />
+                            The Daring Adventurer
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('theDaringAdventurer',0)"
+                          >
+                            0
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('theDaringAdventurer',1)"
+                            title="Risking your neck every day has its advantages. Gain access to better trader items and get 5% more dukes."
+                          >
+                            1
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('theDaringAdventurer',2)"
+                            title="The traders know you can get the job done, plunderer. Gain access to even better trader items and get 10% more dukes."
+                          >
+                            2
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('theDaringAdventurer',3)"
+                            title="	You've made a name for yourself as a mercenary for hire. Gain access to better trader items and get 15% more dukes."
+                          >
+                            3
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('theDaringAdventurer',4)"
+                            title="You are the daring adventurer and get the best rewards for your services. Gain access to better trader items and get 20% more dukes. Pick two quest rewards for your daring efforts."
+                          >
+                            4
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <table
+                      class="table-bordered table table-hover"
+                      id="charismaticNatureTable"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img
+                              class="perkImage"
+                              alt="Charismatic Nature"
+                              src="assets/CharismaticNature.webp"
+                            />
+                            Charismatic Nature
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('charismaticNature',0)"
+                          >
+                            0
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('charismaticNature',1)"
+                            title="People find your survival stories inspiring. Allies and Party Members regenerate lost health 50% faster."
+                          >
+                            1
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('charismaticNature',2)"
+                            title="You are a team leader that empowers others. Allies and Party Members gain 20% more Block and Melee Damage."
+                          >
+                            2
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('charismaticNature',3)"
+                            title="You are a strong motivational force. Allies and Party Members take 10% less damage from all sources, take half damage from bleeding and stop bleeding twice as fast."
+                          >
+                            3
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('charismaticNature',4)"
+                            title="Your leadership abilities are top shelf. Allies and Party Members find 10% better loot."
+                          >
+                            4
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('charismaticNature',5)"
+                            title="You're a true hero. Allies and Party Members find 20% better loot and gain +1 to all attributes."
+                          >
+                            5
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <table
+                      class="table-bordered table table-hover"
+                      id="physicianTable"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img
+                              class="perkImage"
+                              alt="Physician"
+                              src="assets/Physician.webp"
+                            />
+                            Physician
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('physician',0)"
+                          >
+                            0
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('physician',1)"
+                            title="Treated Critical injuries heal 15% faster.
+                            Medical healing items heal 25% more health over time.
+                            Gain 100% more XP using bandages, first aid bandages, first aid kits and splints.
+                            Splints and Casts cure sprains instantly."
+                          >
+                            1
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('physician',2)"
+                            title="Treated Critical injuries heal 25% faster. Medical healing items heal 50% more health over time.
+                            Gain 200% more XP using bandages, first aid bandages, first aid kits and splints. Craft items in the Chemistry Station 20% faster."
+                          >
+                            2
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('physician',3)"
+                            title="Treated Critical injuries heal 50% faster.
+                            Medical healing items heal 100% more health over time.
+                            Gain 500% more XP using bandages, first aid bandages, first aid kits and splints."
+                          >
+                            3
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('physician',4)"
+                            title="Your medical knowledge makes removing limbs a breeze!
+                            Gain additional 20% chance to dismember enemies with batons. Craft items in the Chemistry Station 40% faster."
+                          >
+                            4
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <table
+                      class="table-bordered table table-hover"
+                      id="advancedEngineeringTable"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img
+                              class="perkImage"
+                              alt="Advanced Engineering"
+                              src="assets/AdvancedEngineering.webp"
+                            />
+                            Advanced Engineering
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('advancedEngineering',0)"
+                          >
+                            0
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('advancedEngineering',1)"
+                            title="You are now out of the stone age and an apprentice Engineer! Gain 15% XP from electrical trap kills. Items craft 20% faster in the forge. Craft glue cheaper."
+                          >
+                            1
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('advancedEngineering',2)"
+                            title="	The long hours tinkering on projects is starting to pay dividends! Gain 30% XP from electrical trap kills. Items craft 20% faster at workbenches and cement mixers."
+                          >
+                            2
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('advancedEngineering',3)"
+                            title="	You really know your way around the workshop and can build about anything you set your mind to! Gain 45% XP from electrical trap kills. All forge recipes cost 10% less, crafting Forged Steel and electrical devices costs 15% less."
+                          >
+                            3
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('advancedEngineering',4)"
+                            title="You are the da Vinci of the apocalypse with all your amazing inventions! Gain 60% XP from electrical trap kills. All forge recipes cost 15% less, crafting Forged Steel and electrical devices costs 25% less."
+                          >
+                            4
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('advancedEngineering',5)"
+                            title="You are now and Advanced Engineer and would make MacDyver jealous. Gain 75% XP from electrical trap kills. All forge recipes cost 20% less, crafting Forged Steel and electrical devices costs 35% less."
+                          >
+                            5
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <table
+                      class="table-bordered table table-hover"
+                      id="greaseMonkeyTable"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img
+                              class="perkImage"
+                              alt="Grease Monkey"
+                              src="assets/GreaseMonkey.webp"
+                            />
+                            Grease Monkey
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('greaseMonkey',0)"
+                          >
+                            0
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('greaseMonkey',1)"
+                            title="Your passion to tinker and not walk everywhere has led you on the path of the bicycle mechanic. Craft wheels and bicycle parts 33% cheaper. Repair kits are 10% more effective on vehicles."
+                          >
+                            1
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('greaseMonkey',2)"
+                            title="Why pedal everywhere when there is enough junk lying around to make a minibike? Craft minibike parts 33% cheaper. Repair kits are 20% more effective on vehicles."
+                          >
+                            2
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('greaseMonkey',3)"
+                            title="It was only a matter of time before going faster and carrying more gear was a necessity. Craft motorcycle parts 33% cheaper. Repair kits are 30% more effective on vehicles."
+                          >
+                            3
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('greaseMonkey',4)"
+                            title="Nothing beats the safety and warmth of a nice 4x4 truck. Craft 4x4 truck parts 33% cheaper. Repair kits are 40% more effective on vehicles."
+                          >
+                            4
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('greaseMonkey',5)"
+                            title="Your tinkering desire is never satisfied and only a true genius could figure out how to take to the skies with scrap iron. Craft gyrocopter parts 33% cheaper. Repair kits are 50% more effective on vehicles."
+                          >
+                            5
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table
+                      class="table-bordered table table-hover"
+                      id="lockPickingTable"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img
+                              class="perkImage"
+                              alt="Lock Picking"
+                              src="assets/LockPicking.webp"
+                            />
+                            Lock Picking
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('lockPicking',0)"
+                          >
+                            0
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('lockPicking',1)"
+                            title="Burglar. You are starting to make a name for yourself. You can pick locks 20% faster and have a 10% lower chance to break lockpicks. Unlocks Lockpick."
+                          >
+                            1
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('lockPicking',2)"
+                            title="You are now a lock smith and few locks will keep you out. You can pick locks 40% faster and have a 20% lower chance to break lockpicks."
+                          >
+                            2
+                          </td>
+                          <td
+                            class="select-level"
+                            onclick="GetIntellectCell('lockPicking',3)"
+                            title="You are now a world class safe cracker. Pick locks 60% faster and have a 30% lower chance to break lockpicks."
+                          >
+                            3
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts\main.js"></script>
+    <script>
+      resetbtn();
+    </script>
+  </body>
+</html>
